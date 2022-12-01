@@ -1,7 +1,7 @@
 import { storageService } from "../../services/storage.service"
 
 
-export function logIn(user) {
+export function onLogin(user) {
     return async (dispatch) => {
         storageService.save('user', user)
         dispatch({
@@ -12,7 +12,7 @@ export function logIn(user) {
     }
 }
 
-export function logOut() {
+export function onLogOut() {
     return async (dispatch) => {
         storageService.save('user', null)
         dispatch({
